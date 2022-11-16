@@ -1,0 +1,32 @@
+#results {
+    padding: 0;
+    text-align: left;
+    max-height: 150px;
+    z-index: 100;
+    overflow-y: auto;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+#results h4 {
+    font-size: 1.2rem;
+}
+
+#results>li {
+    list-style: none;
+    padding: 8px 12px;
+    /* display: block; */
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+#results>li:hover {
+    background-color: #e2e8f0;
+}
+
+#results li a{
+    color: #697a8d;
+    text-decoration: none;
+}
+
+
