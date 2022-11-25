@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('slug');
-            $table->text('thumbnail')->default('default.jpg');
+            $table->text('thumbnail');
             $table->text('description');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
