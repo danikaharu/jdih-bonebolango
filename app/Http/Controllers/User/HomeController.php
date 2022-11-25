@@ -21,11 +21,11 @@ class HomeController extends Controller
         $total1Rating = $survey->totalRating(1);
 
 
-        $percent5Rating =  number_format($total5Rating / $totalSurvey * 100, 2);
-        $percent4Rating =  number_format($total4Rating / $totalSurvey * 100, 2);
-        $percent3Rating =  number_format($total3Rating / $totalSurvey * 100, 2);
-        $percent2Rating =  number_format($total2Rating / $totalSurvey * 100, 2);
-        $percent1Rating =  number_format($total1Rating / $totalSurvey * 100, 2);
+        $percent5Rating =  divnum($total5Rating, $totalSurvey * 100);
+        $percent4Rating =  divnum($total4Rating, $totalSurvey * 100);
+        $percent3Rating =  divnum($total3Rating, $totalSurvey * 100);
+        $percent2Rating =  divnum($total2Rating, $totalSurvey * 100);
+        $percent1Rating =  divnum($total1Rating, $totalSurvey * 100);
 
         $data = [
             'products' => \App\Models\Product::with('category')->latest()->limit(3)->get(),
