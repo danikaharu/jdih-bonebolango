@@ -556,6 +556,9 @@
                                 '</span>';
                             $("#response").html(success);
                             $("#pollingForm")[0].reset();
+                            window.setTimeout(function() {
+                                location.reload()
+                            }, 1000);
                         }
                     });
             })
