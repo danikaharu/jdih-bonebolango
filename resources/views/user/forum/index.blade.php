@@ -7,7 +7,7 @@
 @section('content')
     <div class="overlay forum d-flex justify-content-center align-items-center">
         <div class="container text-white text-center">
-            <h1 class="title">Forum</h1>
+            <h1 class="title">Tanya Jawab</h1>
             <h6 class="subtitle">JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kabupaten Bone Bolango merupakan
                 sistem
                 pendokumentasian
