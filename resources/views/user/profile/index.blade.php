@@ -31,7 +31,7 @@
                                 <div class="tab-pane fade {{ $profil->id == 1 ? 'show active' : '' }}"
                                     id="v-pills-{{ $profil->id }}" role="tabpanel">
                                     <h3 class="profile-title">{{ $profil->title }}</h3>
-                                    {!! $profil->body !!}
+                                    <p> {!! $profil->body !!}</p>
                                 </div>
                             @endforeach
                         </div>
