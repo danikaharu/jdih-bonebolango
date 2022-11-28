@@ -8,7 +8,7 @@
                         Kabupaten
                         Bone Bolango Provinsi Gorontalo yang sadar Hukum.</p>
                 </div>
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-4 col-sm-12">
                     <h6>Kontak</h6>
                     <ul>
                         <li><img src="{{ asset('template_user/assets/img/icon/telephone.png') }} " alt="icon"> +62
@@ -21,7 +21,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-4 col-sm-12">
                     <h6>Statistik</h6>
                     <ul>
                         <li><img src="{{ asset('template_user/assets/img/icon/person.png') }} " alt="icon">
