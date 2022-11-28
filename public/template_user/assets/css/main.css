@@ -45,9 +45,8 @@ body{
 
 .overlay.profil {
     background: url('../img/background/bg-profil.webp') no-repeat center;
-    background-size: 100%;
     width: 100%;
-    height: 89vh;
+    height: 100vh;
 }
 
 .overlay.news {
@@ -64,9 +63,8 @@ body{
 
 .overlay.forum{
     background: url('../img/background/bg-forum.webp') no-repeat center;
-    background-size: 100%;
     width: 100%;
-    height: 89vh;
+    height: 100vh;
 }
 
 .overlay .title{
@@ -171,6 +169,12 @@ body{
     display: block;
     border-bottom: 8px solid var(--secondary);
     width: 17rem;
+}
+
+.news .heading .arrow{
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
 }
 
 .news .arrow-left{
@@ -504,6 +508,27 @@ transition: 0.4s ease;
     width: 17rem;
 }
 
+.gallery .heading .arrow{
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.gallery .arrow-left{
+    background: var(--white);
+    border-radius: 50%;
+    padding: 0.9rem;
+    text-decoration: none;
+}
+
+.gallery .arrow-right{
+    background: var(--white);
+    border-radius: 50%;
+    padding: 0.9rem;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 .gallery-content .card{
     background-color: transparent;
     border: none;
@@ -545,21 +570,6 @@ transition: 0.4s ease;
     font-size: 0.813rem;
     display: inline-block;
     margin-bottom: 0.8rem;
-}
-
-.gallery .arrow-left{
-    background: var(--white);
-    border-radius: 50%;
-    padding: 0.9rem;
-    text-decoration: none;
-}
-
-.gallery .arrow-right{
-    background: var(--white);
-    border-radius: 50%;
-    padding: 0.9rem;
-    text-decoration: none;
-    margin-left: 10px;
 }
 
 .consultation{
@@ -890,6 +900,7 @@ transition: 0.4s ease;
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 20px;
+    overflow-wrap: break-word;
 }
 
 .accordion-menu{
@@ -1210,7 +1221,7 @@ margin-bottom: 0.93rem;
 }
 
 .detail-forum{
-    padding: 0.5rem 6rem;
+    padding: 0.5rem 2rem;
 }
 
 .forum-chat{
@@ -1762,6 +1773,18 @@ margin-bottom: 0.93rem;
     background-color: transparent;
 }
 
+.page-item.disabled span.page-link{
+     background-color: #FF7978;
+        color: black;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        border: none;
+        margin-left: 0.2rem;
+        margin-right: 0.5rem;
+        font-size: 12px;
+}
+
 footer{
     height: 100%;
     background-color: var(--primary);
@@ -1816,10 +1839,15 @@ footer .footer-copyright p{
     margin: auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-}
+   }
 
 
 @media only screen and (max-width: 992px) {
+    nav{
+        background-color: black !important;
+    }
+
+
     .overlay.home{
         height: 70vh;
     }
@@ -1828,6 +1856,7 @@ footer .footer-copyright p{
         margin-top: 8rem;
     }
 
+    .overlay .search,
     .overlay .search .search__bar{
         width: 100%;
     }
@@ -1835,6 +1864,22 @@ footer .footer-copyright p{
     .product{
         top: 0;
         margin-top: 5rem;
+    }
+ 
+    .news .heading h3{
+        font-size: 1.8rem;
+    }
+    
+    .news .heading h3::after{
+        width: 13rem;
+    }
+
+    .gallery .heading h3{
+        font-size: 1.8rem;
+     }
+
+    .gallery .heading h3::after{
+        width: 13rem;
     }
 
     .welcome-image{
@@ -1844,6 +1889,7 @@ footer .footer-copyright p{
     .welcome-image img{
         margin: auto;
         display: block;
+        width: 100%;
     }
 
     .welcome-text{
@@ -1871,6 +1917,14 @@ footer .footer-copyright p{
         background-position: center;
     }
 
+    .polling-heading h3::after{
+        width: 100%;
+    }
+    
+    .polling-heading h6{
+        width: 100%;
+    }
+
     .gallery{
         background-size: cover;
         background-position: center;
@@ -1878,6 +1932,40 @@ footer .footer-copyright p{
 
     .related-link{
         margin-top: 1.2rem;
+    }
+     
+    .related-link img{
+        width: 100%;
+    }
+
+    footer .footer-copyright p{
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .detail-gallery .social-media p::before{
+        width: 100%;
+    }
+
+    .forum .heading{
+        padding: 0;
+    }
+
+    .forum .heading h3{
+        font-size: 1.5rem;
+    }
+
+    .forum .heading h3::after {
+        width: 10rem;
+    }
+
+    .forum .content .card{
+        padding: 0.8rem;
+    }
+
+    .detail-product{
+        padding: 0 0.5rem;
     }
 }
 
