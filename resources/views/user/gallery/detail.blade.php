@@ -91,7 +91,7 @@
             <div class="row">
                 @foreach ($fourGallery as $gallery)
                     <div class="col-lg-4 mb-3">
-                        <div class="gallery-content">
+                        <div class="content">
                             <div class="card">
                                 <a href="{{ route('detail-galeri', $gallery->slug) }}">
                                     <img src="{{ asset('storage/upload/galeri/' . $gallery->thumbnail()->file) }}"
