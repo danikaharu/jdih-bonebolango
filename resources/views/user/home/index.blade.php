@@ -13,7 +13,7 @@
                 pendokumentasian
                 Produk Hukum yang ada pada lingkungan Pemerintah Kabupaten Bone Bolango</h6>
             <div class="search">
-                <input id="search-bar" type="text" name="search" placeholder="Cari Produk Hukum Disini" class="search__bar">
+                <input id="search-bar" type="text" name="search" placeholder="Cari Peraturan Disini" class="search__bar">
                 <ul id="results">
                 </ul>
             </div>
@@ -44,9 +44,9 @@
 
     <section class="news">
         <div class="container">
-            <div class="heading">
-                <h3 data-aos="fade-right" data-aos-duration="1500">Berita Terkini</h3>
-                <div class="arrow" data-aos="fade-left" data-aos-duration="2000">
+            <div class="heading" data-aos="fade-right" data-aos-duration="1000">
+                <h3>Berita Terkini</h3>
+                <div class="arrow">
                     <a class="arrow-left mr-4" href="#newsCarousel" role="button" data-bs-slide="prev">
                         <img src="{{ asset('template_user/assets/img/icon/arrow-left.svg') }} " alt="arrow left">
                     </a>
@@ -106,7 +106,7 @@
                         <a href="#">Pelajari Lebih Lanjut <i class='bx bx-right-arrow-alt'></i> </a>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="catalog-card">
@@ -243,9 +243,9 @@
 
     <section class="gallery">
         <div class="container">
-            <div class="heading">
-                <h3 data-aos="fade-right" data-aos-duration="1500">Galeri Terbaru</h3>
-                <div class="arrow" data-aos="fade-left" data-aos-duration="2000">
+            <div class="heading" data-aos="fade-right" data-aos-duration="1000">
+                <h3>Galeri Terbaru</h3>
+                <div class="arrow">
                     <a class="arrow-left mr-4" href="#galleryCarousel" role="button" data-bs-slide="prev">
                         <img src="{{ asset('template_user/assets/img/icon/arrow-left.svg') }}" alt="arrow left">
                     </a>
@@ -255,7 +255,6 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
                     <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
@@ -298,9 +297,9 @@
             <div class="vector3 d-none d-lg-block">
                 <img src="{{ asset('template_user/assets/img/vector/vector3.svg') }}" alt="vector">
             </div>
-            <div class="consultation-content">
+            <div class="consultation-content" data-aos="fade-right" data-aos-duration="2000">
                 <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
+                    <div class="col-lg-6">
                         <form id="discussionForm" action="{{ route('forum.store') }}" method="POST" class="row g-3">
                             @csrf
                             <input type="hidden" id="token" value="{{ csrf_token() }}">
@@ -326,7 +325,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="col-lg-6">
                         <div class="vector4 d-none d-lg-block">
                             <img src="{{ asset('template_user/assets/img/vector/vector4.svg') }}" alt="vector">
                         </div>
@@ -370,9 +369,9 @@
                 <h6>Bagaimana Kualitas Layanan Web JDIH dari Rentang Bintang
                     1 (Sangat Buruk) sampai 5 (Sangat Baik) ?</h6>
             </div>
-            <div class="polling-content">
+            <div class="polling-content" data-aos="fade-right" data-aos-duration="1500">
                 <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
+                    <div class="col-lg-6">
                         <form id="pollingForm" action="{{ route('survey.store') }}" method="POST" class="row g-3">
                             @csrf
                             <input type="hidden" id="token" value="{{ csrf_token() }}">
@@ -411,7 +410,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="col-lg-6">
                         <div class="polling-progress">
                             <h2>{{ $data['averageRating'] }}</h2>
                             @include('user.home.include.rating')
