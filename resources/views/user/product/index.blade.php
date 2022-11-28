@@ -13,7 +13,7 @@
                 pendokumentasian
                 Produk Hukum yang ada pada lingkungan Pemerintah Kabupaten Bone Bolango</h6>
             <div class="search">
-                <input id="search-bar" type="text" name="search" placeholder="Cari Produk Hukum Disini" class="search__bar">
+                <input id="search-bar" type="text" name="search" placeholder="Cari Peraturan Disini" class="search__bar">
                 <ul id="results">
                 </ul>
             </div>
@@ -97,9 +97,11 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-2">
+                                    <div class="d-none d-md-block">
+                                        <img src="{{ asset('storage/upload/kategori/' . $product->category->icon) }}"
+                                            alt="product-icon" class="category-icon">
 
-                                    <img src="{{ asset('storage/upload/kategori/' . $product->category->icon) }}"
-                                        alt="product-icon" class="category-icon">
+                                    </div>
                                 </div>
                                 <div class="col-10">
                                     <div class="head">
