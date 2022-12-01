@@ -14,7 +14,8 @@
             <h5 class="card-header">Edit Produk Hukum</h5>
 
             <div class="card-body">
-                <form action="{{ route('admin.product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.product.update', $product->slug) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
 
