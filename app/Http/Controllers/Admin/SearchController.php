@@ -77,7 +77,7 @@ class SearchController extends Controller
             // We make use of the SEARCHABLE_FIELDS constant in our model
             // we dont want id in the match, so we filter it out.
             $fields = array_filter($model::SEARCHABLE_FIELDS, fn ($field) => $field !== 'id');
-            return $model::search($keyword)->get()->map(function ($modelRecord) use ($model, $fields, $keyword, $classname) {
+            return $model::search($keyword)->take(5)->get()->map(function ($modelRecord) use ($model, $fields, $keyword, $classname) {
 
                 // only extracting the relevant fields from our model
                 $fieldsData = $modelRecord->only($fields);
