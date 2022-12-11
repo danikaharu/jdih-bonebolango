@@ -49,7 +49,7 @@
                  $(".search-results").removeClass('d-none').addClass('d-block');
              }
 
-             const results = response.data;
+             const results = response;
              // empty list
              resultsList.innerHTML = '';
              results.forEach((result) => {
