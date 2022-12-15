@@ -25,7 +25,7 @@
                     <h6>Statistik</h6>
                     <ul>
                         <li><img src="{{ asset('template_user/assets/img/icon/person.png') }} " alt="icon">
-                            Pengunjung Online
+                            Pengunjung Bulan Ini
                             <p>3</p>
                         </li>
                         <li><img src="{{ asset('template_user/assets/img/icon/person-outline.png') }} " alt="icon">
@@ -45,7 +45,7 @@
     <div class="footer-copyright">
         <p>
             Copyright 2022 Bagian Hukum Setda Kabupaten Bone Bolango
-            didukung oleh Dani Kaharu & Zulhamd Podungge (Tim Expert Diskominfo Bone Bolango)
+            didukung oleh Diskominfo Bone Bolango
         </p>
     </div>
 </footer>
