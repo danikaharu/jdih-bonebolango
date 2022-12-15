@@ -34,5 +34,22 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('template_user/assets/css/main.css') }}">
 
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" media='screen and (max-device-width: 992px)'
+        href="{{ asset('template_user/assets/css/responsive.css') }}">
+
     @stack('styles')
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9W31D9BEZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C9W31D9BEZ');
+    </script>
 </head>
