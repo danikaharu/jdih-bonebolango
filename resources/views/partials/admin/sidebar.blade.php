@@ -103,12 +103,12 @@
         </li>
 
         <!-- Pengunjung -->
-        {{-- <li class="menu-item {{ request()->is('admin/visitor') ? ' active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/visitor') ? ' active' : '' }}">
             <a href="{{ route('admin.visitor.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-stats"></i>
                 <div data-i18n="Boxicons">Pengunjung</div>
             </a>
-        </li> --}}
+        </li>
 
         <!-- Request Peraturan -->
         {{-- <li class="menu-item {{ request()->is('admin/request-product') ? ' active' : '' }}">
