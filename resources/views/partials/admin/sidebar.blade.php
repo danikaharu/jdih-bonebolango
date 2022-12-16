@@ -153,6 +153,14 @@
             </a>
         </li>
 
+        <!-- Log -->
+        <li class="menu-item">
+            <a href="{{ route('blv.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-bar-chart-alt-2"></i>
+                <div data-i18n="Boxicons">Log</div>
+            </a>
+        </li>
+
 
     </ul>
 </aside>
