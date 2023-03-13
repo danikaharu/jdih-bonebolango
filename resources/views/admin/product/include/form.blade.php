@@ -15,7 +15,8 @@
         @enderror
     </div>
     <div class="mb-3 col-md-12">
-        <label for="title" class="form-label">Judul Peraturan <span class="text-danger"> &#42;</span></label>
+        <label for="title" class="form-label">Judul Peraturan <span class="text-danger"> &#42;</span> <span> Contoh :
+                Retribusi Pajak Usaha</span></label>
         <input class="form-control @error('title') is-invalid @enderror" type="text" name="title"
             value="{{ isset($product) ? $product->title : old('title') }}" />
         @error('title')
