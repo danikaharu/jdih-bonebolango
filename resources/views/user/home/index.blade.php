@@ -31,7 +31,9 @@
                             </div>
                             <div class="col-lg-8">
                                 <a href="{{ route('detail-produk', $product->slug) }}" class="product-title">
-                                    {{ $product->title }}
+                                    {{ $product->category->description }} Nomor {{ $product->rule_number }}
+                                    Tahun {{ $product->year }}
+                                    Tentang {{ $product->title }}
                                 </a>
                                 <a href="#" class="product-category">{{ $product->category->title }}</a>
                             </div>
@@ -98,11 +100,8 @@
                     <div class="catalog-heading">
                         <h3>Katalog Produk Hukum
                             Daerah</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
-                            est
-                            a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin
-                            lacus,
-                            ut interdum tellus elit sed risus.</p>
+                        <p>Berisi peraturan-peraturan yang ada di Kabupaten Bone Bolango yang meliputi, Peraturan Daerah,
+                            Peraturan Bupati, Surat Keputusan Bupati, dan Surat Keputusan Sekretaris Daerah</p>
                         <a href="#">Pelajari Lebih Lanjut <i class='bx bx-right-arrow-alt'></i> </a>
                     </div>
                 </div>
@@ -115,7 +114,8 @@
                                     <h5>Peraturan Daerah
                                         (PERDA)</h5>
                                 </div>
-                                <p>Peraturan Daerah Kabupaten Bone Bolango</p>
+                                <p>Peraturan Perundang-undangan yang dibentuk oleh Dewan Perwakilan Rakyat Daerah Kabupaten
+                                    dengan persetujuan bersama Bupati.</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -125,8 +125,7 @@
                                     <h5>Peraturan Bupati
                                         (PERBUP)</h5>
                                 </div>
-                                <p>Peraturan Daerah adalah peraturan yang ditetapkan oleh daerah dan bla bla bla bla
-                                    sehingga jadilah peraturan hehehe</p>
+                                <p>Peraturan perundang-undangan daerah yang ditetapkan oleh Bupati</p>
                             </div>
                         </div>
                     </div>
@@ -138,8 +137,8 @@
                                     <h5>Surat Keputusan Bupati
                                         (SK Bupati)</h5>
                                 </div>
-                                <p>Peraturan Daerah adalah peraturan yang ditetapkan oleh daerah dan bla bla bla bla
-                                    sehingga jadilah peraturan hehehe</p>
+                                <p>Naskah dinas dalam bentuk Keputusan yang bersifat penetapan dan ditandatangani oleh
+                                    Bupati</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -149,8 +148,8 @@
                                     <h5>Surat Keputusan Sekda
                                         (SK Sekda)</h5>
                                 </div>
-                                <p>Peraturan Daerah adalah peraturan yang ditetapkan oleh daerah dan bla bla bla bla
-                                    sehingga jadilah peraturan hehehe</p>
+                                <p>Naskah dinas dalam bentuk Keputusan yang bersifat penetapan dan ditandatangani oleh
+                                    Sekretaris Daerah</p>
                             </div>
                         </div>
                     </div>
@@ -168,7 +167,7 @@
                             <img src="{{ asset('template_user/assets/img/vector/vector1.svg') }} " alt="vector">
                         </div>
                         <div class="welcome-image">
-                            <img src="{{ asset('template_user/assets/img/bupati.png') }} " alt="welcome-image">
+                            <img src="{{ asset('template_user/assets/img/bupati.webp') }} " alt="welcome-image">
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -185,10 +184,10 @@
                             </p>
                             <p>
                                 Semoga dengan adanya website ini, diharapkan mampu meningkatkan efektifitas
-                                penyebarluasan produk hukum khususnya Produk Hukum Daerah Kabupaten Kendal yang
+                                penyebarluasan produk hukum khususnya Produk Hukum Daerah Kabupaten Bone Bolango yang
                                 meliputi
                                 Peraturan Daerah (PERDA), Peraturan Bupati (PERBUP), dan Keputusan Bupati (KEPBUP)
-                                sehingga kedepannya mampu menciptakan masyarakat Kendal yang sadar hukum. Amin.
+                                sehingga kedepannya mampu menciptakan masyarakat Bone Bolango yang sadar hukum. Amin.
                             </p>
                             <a href="{{ route('profil') }}">Profil Kami</a>
                         </div>
@@ -217,7 +216,8 @@
                     <div class="statistic-card">
                         <h4>{{ $data['totalCategoryProduct'][0]->products_count }}</h4>
                         <h5>Peraturan Daerah</h5>
-                        <p>Berisikan Peraturan Daerah yang telah melalui tahapan bla bla bla dan telah di sahkan</p>
+                        <p>Peraturan Perundang-undangan yang dibentuk oleh Dewan Perwakilan Rakyat Daerah Kabupaten dengan
+                            persetujuan bersama Bupati.</p>
                         <a href="#">Lihat Selengkapnya <i class='bx bx-right-arrow-alt bx-sm'></i></a>
                     </div>
                 </div>
@@ -225,7 +225,7 @@
                     <div class="statistic-card">
                         <h4>{{ $data['totalCategoryProduct'][1]->products_count }}</h4>
                         <h5>Peraturan Bupati</h5>
-                        <p>Berisikan Peraturan Daerah yang telah melalui tahapan bla bla bla dan telah di sahkan</p>
+                        <p>Peraturan perundang-undangan daerah yang ditetapkan oleh Bupati</p>
                         <a href="#">Lihat Selengkapnya <i class='bx bx-right-arrow-alt bx-sm'></i></a>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
                     <div class="statistic-card">
                         <h4>{{ $data['totalCategoryProduct'][2]->products_count }}</h4>
                         <h5>Keputusan Bupati</h5>
-                        <p>Berisikan Keputusan Bupati yang telah melalui tahapan bla bla bla dan telah di sahkan</p>
+                        <p>Naskah dinas dalam bentuk Keputusan yang bersifat penetapan dan ditandatangani oleh Bupati</p>
                         <a href="#">Lihat Selengkapnya <i class='bx bx-right-arrow-alt bx-sm'></i></a>
                     </div>
                 </div>
@@ -505,24 +505,28 @@
             <div class="row text-center">
                 <div class="col-lg-6">
                     <a href="https://kominfo.bonebolangokab.go.id" target="_blank">
-                        <img src="{{ asset('template_user/assets/img/logo/kominfo.svg') }}" alt="logo">
+                        <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/kominfo.webp') }}"
+                            alt="logo">
                     </a>
                 </div>
                 <div class="col-lg-6">
                     <a href="https://bonebolangokab.go.id" target="_blank">
-                        <img src="{{ asset('template_user/assets/img/logo/pemkab.svg') }}" alt="logo">
+                        <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/pemkab.webp') }}"
+                            alt="logo">
                     </a>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-lg-6">
                     <a href="https://opendata.bonebolangokab.go.id" target="_blank">
-                        <img src="{{ asset('template_user/assets/img/logo/open_data.svg') }}" alt="logo">
+                        <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/open_data.webp') }}"
+                            alt="logo">
                     </a>
                 </div>
                 <div class="col-lg-6">
                     <a href="https://ppid.bonebolangokab.go.id" target="_blank">
-                        <img src="{{ asset('template_user/assets/img/logo/ppid.svg') }}" alt="logo">
+                        <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/ppid.webp') }}"
+                            alt="logo">
                     </a>
                 </div>
             </div>
