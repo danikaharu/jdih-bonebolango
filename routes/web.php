@@ -75,7 +75,7 @@ Route::get('/galeri/{gallery}', [App\Http\Controllers\User\HomeController::class
 
 Route::get('/forum', [App\Http\Controllers\User\HomeController::class, 'forum'])->name('forum');
 Route::get('/forum/{discussion}', [App\Http\Controllers\User\HomeController::class, 'detail_forum'])->name('detail-forum');
-Route::post('/forum', [App\Http\Controllers\User\DiscussionController::class, 'store'])->name('forum.store');
+Route::post('/forum', [App\Http\Controllers\User\DiscussionController::class, 'store'])->middleware('throttle:public')->name('forum.store');
 Route::post('/forum/{discussion}/reply', [App\Http\Controllers\User\DiscussionController::class, 'storeReplyComment'])->name('forum.storeReplyComment');
 
 Route::get('/produk', [App\Http\Controllers\User\HomeController::class, 'produk'])->name('produk');
@@ -83,4 +83,4 @@ Route::get('/produk/{product}', [App\Http\Controllers\User\HomeController::class
 Route::post('/produk', [App\Http\Controllers\User\RequestProductController::class, 'store'])->name('request-product.store');
 Route::get('/download/{product}', [App\Http\Controllers\User\HomeController::class, 'unduh_produk'])->name('unduh-produk');
 
-Route::post('/survey', [App\Http\Controllers\User\SurveyController::class, 'store'])->name('survey.store');
+Route::post('/survey', [App\Http\Controllers\User\SurveyController::class, 'store'])->middleware('throttle:public')->name('survey.store');
