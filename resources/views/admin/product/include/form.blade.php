@@ -65,6 +65,9 @@
             <option value="4"
                 {{ isset($product) && $product->status == 4 ? 'selected' : (old('status') == 4 ? 'selected' : '') }}>
                 Dicabut</option>
+            <option value="5"
+                {{ isset($product) && $product->status == 5 ? 'selected' : (old('status') == 5 ? 'selected' : '') }}>
+                Berlaku</option>
         </select>
         @error('status')
             <div class="invalid-feedback">{{ $message }}</div>

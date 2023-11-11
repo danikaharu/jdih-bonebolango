@@ -44,7 +44,7 @@ class StoreProductRequest extends FormRequest
             'title' => 'required|min:5|max:255',
             'slug' => 'min:5|max:255',
             'file' => 'required|mimetypes:application/pdf',
-            'status' => 'required|in:1,2, 3, 4',
+            'status' => 'required|in:1,2, 3, 4, 5',
         ];
     }
 

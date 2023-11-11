@@ -51,8 +51,10 @@ class Product extends Model
             return 'Diubah';
         } elseif ($this->status == 3) {
             return 'Mencabut';
-        } else {
+        } elseif ($this->status == 4) {
             return 'Dicabut';
+        } else {
+            return 'Berlaku';
         }
     }
 }
