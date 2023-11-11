@@ -102,7 +102,15 @@ class HomeController extends Controller
 
     public function unduh_produk(\App\Models\Product $product)
     {
-        $file_path = public_path('storage/upload/produk/' . $product->file);
-        return response()->download($file_path);
+        try {
+            $file_path = storage_path('app/public/upload/produk/' . $product->file);
+
+            return response()->download($file_path, $product->title . '.pdf', [
+                'Content-Type' => 'application/octet-stream',
+                'Content-Length' => filesize($file_path),
+            ])->setStatusCode(200);
+        } catch (\Throwable $th) {
+            return redirect()->back();
+        }
     }
 }
