@@ -26,7 +26,7 @@ class SearchNewsController extends Controller
 
     public function search(Request $request)
     {
-        $keyword = $request->search;
+        $keyword = clean($request->search);
 
         // just for demonstration, you can exclude models from the searches here
         //        $toExclude = [Comment::class];
