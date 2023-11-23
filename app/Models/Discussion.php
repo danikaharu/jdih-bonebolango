@@ -35,7 +35,7 @@ class Discussion extends Model
 
     public function comments()
     {
-        return $this->morphMany(\App\Models\Comment::class, 'commentable')->whereNull('parent_id');
+        return $this->morphMany(\App\Models\Comment::class, 'commentable');
     }
 
     /**
