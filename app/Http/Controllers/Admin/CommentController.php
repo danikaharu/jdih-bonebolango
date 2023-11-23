@@ -25,7 +25,7 @@ class CommentController extends Controller
 
         $this->sendEmail($discussion);
 
-        return redirect()->back()->with('toast_success', 'Komentar berhasil');
+        return redirect()->back()->with('success', 'Komentar berhasil');
     }
 
     public function storeReplyComment(Request $request, Discussion $discussion)
@@ -61,7 +61,7 @@ class CommentController extends Controller
         }
     }
 
-    public function sendEmail(Discussion $discussion)
+    private function sendEmail(Discussion $discussion)
     {
         $comments = [
             'greeting' => 'Halo ' . $discussion->name . ',',
