@@ -36,7 +36,7 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Komentar</th>
+                            <th>Email</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -77,8 +77,7 @@
                         data: 'name'
                     },
                     {
-                        data: 'comment',
-                        orderable: false,
+                        data: 'email'
                     },
                     {
                         data: 'action',
