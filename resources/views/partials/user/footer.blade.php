@@ -26,15 +26,15 @@
                     <ul>
                         <li><img src="{{ asset('template_user/assets/img/icon/person.png') }} " alt="icon">
                             Pengunjung Bulan Ini
-                            <p>3</p>
+                            <p>{{ $totalVisitorMonth }}</p>
                         </li>
                         <li><img src="{{ asset('template_user/assets/img/icon/person-outline.png') }} " alt="icon">
                             Pengunjung Hari Ini
-                            <p>3</p>
+                            <p>{{ $totalVisitorToday }}</p>
                         </li>
                         <li><img src="{{ asset('template_user/assets/img/icon/multi-person.png') }} "
                                 alt="icon">Total Pengunjung
-                            <p>3</p>
+                            <p>{{ $totalVisitor }}</p>
                         </li>
                     </ul>
                 </div>
