@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="overlay forum d-flex justify-content-center align-items-center">
+    <div class="overlay produk d-flex justify-content-center align-items-center">
         <div class="container text-white text-center">
             <h1 class="title">Produk Hukum</h1>
             <h6 class="subtitle">JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kabupaten Bone Bolango merupakan
@@ -17,6 +17,7 @@
                 <ul id="results">
                 </ul>
             </div>
+            <div class="container box d-lg-block d-none"></div>
         </div>
     </div>
 

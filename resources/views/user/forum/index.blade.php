@@ -18,6 +18,7 @@
                 <ul id="results">
                 </ul>
             </div>
+            <div class="container box d-lg-block d-none"></div>
         </div>
     </div>
 

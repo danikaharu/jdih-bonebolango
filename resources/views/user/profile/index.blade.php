@@ -12,6 +12,7 @@
                 sistem
                 pendokumentasian
                 Produk Hukum yang ada pada lingkungan Pemerintah Kabupaten Bone Bolango</h6>
+            <div class="container box d-lg-block d-none"></div>
         </div>
     </div>
 

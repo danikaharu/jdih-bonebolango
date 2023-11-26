@@ -46,7 +46,7 @@
                                         </a>
                                     </div>
                                     <div class="col-2">
-                                        <span class="badge badge-center bg-primary rounded-pill">
+                                        <span class="badge bg-primary">
                                             {{ $totalUsersPerDay }}</span>
                                     </div>
                                 </div>
@@ -57,8 +57,19 @@
                                         </a>
                                     </div>
                                     <div class="col-2">
-                                        <span class="badge badge-center bg-primary rounded-pill">
+                                        <span class="badge bg-primary">
                                             {{ $totalUsersPerMonth }}</span>
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col-10">
+                                        <a href="#" target="blank">
+                                            Total Pengunjung
+                                        </a>
+                                    </div>
+                                    <div class="col-2">
+                                        <span class="badge bg-primary">
+                                            {{ $totalUsers }}</span>
                                     </div>
                                 </div>
                             </li>
