@@ -34,10 +34,6 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('template_user/assets/css/main.css') }}">
 
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" media='screen and (max-device-width: 992px)'
-        href="{{ asset('template_user/assets/css/responsive.css') }}">
-
     @stack('styles')
 
     <!-- Google tag (gtag.js) -->
