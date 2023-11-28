@@ -11,8 +11,8 @@
                 <div class="col-lg-4 col-sm-12">
                     <h6>Kontak</h6>
                     <ul>
-                        <li><img src="{{ asset('template_user/assets/img/icon/telephone.png') }} " alt="icon"> +62
-                            81-234-567-890</li>
+                        {{-- <li><img src="{{ asset('template_user/assets/img/icon/telephone.png') }} " alt="icon"> +62
+                            81-234-567-890</li> --}}
                         <li><img src="{{ asset('template_user/assets/img/icon/email.png') }} " alt="icon">
                             jdih@bonebolangokab.go.id</li>
                         <li>
@@ -44,8 +44,7 @@
     <hr style="color: grey; ">
     <div class="footer-copyright">
         <p>
-            Copyright 2022 Bagian Hukum Setda Kabupaten Bone Bolango
-            didukung oleh Diskominfo Bone Bolango
+            Copyright 2022 Bagian Hukum dan Kerjasama Kabupaten Bone Bolango
         </p>
     </div>
 </footer>
