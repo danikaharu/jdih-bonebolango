@@ -74,7 +74,7 @@
                                                     <div class="card">
                                                         <a href="{{ route('detail-berita', $news->slug) }}">
                                                             <img src="{{ asset('storage/upload/berita/' . $news->thumbnail) }}"
-                                                                alt="gambar berita">
+                                                                alt="gambar berita" loading="lazy">
                                                             <p>{{ $news->title }}</p>
                                                         </a>
                                                         <small><i class='bx-pull-left bx bx-calendar-event bx-sm'></i>
@@ -111,7 +111,8 @@
                         <div class="col-lg-6">
                             <div class="catalog-card">
                                 <div class="catalog-card-heading">
-                                    <img src="{{ asset('template_user/assets/img/icon/perda.png') }}" alt="icon">
+                                    <img src="{{ asset('template_user/assets/img/icon/perda.png') }}" alt="icon"
+                                        loading="lazy">
                                     <h5>Peraturan Daerah
                                         (PERDA)</h5>
                                 </div>
@@ -122,7 +123,8 @@
                         <div class="col-lg-6">
                             <div class="catalog-card">
                                 <div class="catalog-card-heading">
-                                    <img src="{{ asset('template_user/assets/img/icon/perbup.png') }}" alt="icon">
+                                    <img src="{{ asset('template_user/assets/img/icon/perbup.png') }}" alt="icon"
+                                        loading="lazy">
                                     <h5>Peraturan Bupati
                                         (PERBUP)</h5>
                                 </div>
@@ -134,7 +136,7 @@
                         <div class="col-lg-6">
                             <div class="catalog-card">
                                 <div class="catalog-card-heading">
-                                    <img src="{{ asset('template_user/assets/img/icon/kepbup.png') }}">
+                                    <img src="{{ asset('template_user/assets/img/icon/kepbup.png') }}" loading="lazy">
                                     <h5>Surat Keputusan Bupati
                                         (SK Bupati)</h5>
                                 </div>
@@ -145,7 +147,7 @@
                         <div class="col-lg-6">
                             <div class="catalog-card">
                                 <div class="catalog-card-heading">
-                                    <img src="{{ asset('template_user/assets/img/icon/kepsek.png') }}">
+                                    <img src="{{ asset('template_user/assets/img/icon/kepsek.png') }}" loading="lazy">
                                     <h5>Surat Keputusan Sekda
                                         (SK Sekda)</h5>
                                 </div>
@@ -165,15 +167,18 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="vector1 d-none d-lg-block">
-                            <img src="{{ asset('template_user/assets/img/vector/vector1.svg') }} " alt="vector">
+                            <img src="{{ asset('template_user/assets/img/vector/vector1.svg') }} " alt="vector"
+                                loading="lazy">
                         </div>
                         <div class="welcome-image">
-                            <img src="{{ asset('template_user/assets/img/bupati.webp') }} " alt="welcome-image">
+                            <img src="{{ asset('template_user/assets/img/bupati.webp') }} " alt="welcome-image"
+                                loading="lazy">
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <div class="vector2 d-none d-lg-block">
-                            <img src="{{ asset('template_user/assets/img/vector/vector2.svg') }} " alt="vector">
+                            <img src="{{ asset('template_user/assets/img/vector/vector2.svg') }} " alt="vector"
+                                loading="lazy">
                         </div>
                         <div class="welcome-text">
                             <h2>Selamat Datang di Website
@@ -270,7 +275,7 @@
                                                     <div class="card">
                                                         <a href="{{ route('detail-galeri', $gallery->slug) }}">
                                                             <img src="{{ asset('storage/upload/galeri/' . $gallery->thumbnail()->file) }}"
-                                                                alt="galeri">
+                                                                alt="galeri" loading="lazy">
                                                             <p>{{ $gallery->title }}</p>
                                                         </a>
                                                         <small><i class='bx-pull-left bx bx-show bx-sm'></i>
@@ -296,7 +301,7 @@
                 <h3>Konsultasi Hukum</h3>
             </div>
             <div class="vector3 d-none d-lg-block">
-                <img src="{{ asset('template_user/assets/img/vector/vector3.svg') }}" alt="vector">
+                <img src="{{ asset('template_user/assets/img/vector/vector3.svg') }}" alt="vector" loading="lazy">
             </div>
             <div class="consultation-content" data-aos="fade-right" data-aos-duration="2000">
                 <div class="row">
@@ -335,7 +340,7 @@
                                 @foreach ($data['discussions'] as $discussion)
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                         <p><img src="{{ asset('template_user/assets/img/icon/double-quote.svg') }}"
-                                                alt="double quote">
+                                                alt="double quote" loading="lazy">
                                             {{ $discussion->comment }}
                                         </p>
                                         <h6>{{ $discussion->name }}</h6>
@@ -507,13 +512,13 @@
                 <div class="col-lg-6">
                     <a href="https://kominfo.bonebolangokab.go.id" target="_blank">
                         <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/kominfo.webp') }}"
-                            alt="logo">
+                            alt="logo" loading="lazy">
                     </a>
                 </div>
                 <div class="col-lg-6">
                     <a href="https://bonebolangokab.go.id" target="_blank">
                         <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/pemkab.webp') }}"
-                            alt="logo">
+                            alt="logo" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -521,13 +526,13 @@
                 <div class="col-lg-6">
                     <a href="https://opendata.bonebolangokab.go.id" target="_blank">
                         <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/open_data.webp') }}"
-                            alt="logo">
+                            alt="logo" loading="lazy">
                     </a>
                 </div>
                 <div class="col-lg-6">
                     <a href="https://ppid.bonebolangokab.go.id" target="_blank">
                         <img class="img-fluid" src="{{ asset('template_user/assets/img/logo/ppid.webp') }}"
-                            alt="logo">
+                            alt="logo" loading="lazy">
                     </a>
                 </div>
             </div>
