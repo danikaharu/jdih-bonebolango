@@ -1532,6 +1532,7 @@ margin-bottom: 0.93rem;
     border-radius: 40px;
     padding:  0.5rem 1rem;
     color: var(--primary);
+    z-index: 1;
 }
 
 .detail-product .heading  .category-product:hover{
@@ -1548,6 +1549,7 @@ margin-bottom: 0.93rem;
     text-align: center;
     border-radius: 40px;
     padding:  0.5rem 1rem;
+    z-index: 1;
 }
 
 .detail-product h4{
