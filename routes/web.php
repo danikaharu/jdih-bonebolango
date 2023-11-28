@@ -37,7 +37,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::post('/discussion/{discussion}/reply', [App\Http\Controllers\Admin\CommentController::class, 'storeReplyComment'])->name('comment.storeReplyComment');
 
     // Discussion
-    Route::resource('/discussion', App\Http\Controllers\DiscussionController::class);
+    Route::resource('/discussion', App\Http\Controllers\Admin\DiscussionController::class);
 
     // Request Product
     Route::resource('/request-product', App\Http\Controllers\RequestProductController::class)->except('edit', 'update');

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Discussion\StoreDiscussionRequest;
 use App\Models\Comment;
 use App\Models\Discussion;
