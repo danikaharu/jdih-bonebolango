@@ -43,7 +43,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::resource('/request-product', App\Http\Controllers\RequestProductController::class)->except('edit', 'update');
 
     // Survey
-    Route::resource('/survey', App\Http\Controllers\SurveyController::class)->except('edit', 'update');
+    Route::resource('/survey', App\Http\Controllers\Admin\SurveyController::class)->except('edit', 'update');
 
     // Gallery
     Route::resource('/gallery', App\Http\Controllers\Admin\GalleryController::class);
