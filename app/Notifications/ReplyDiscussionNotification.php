@@ -2,15 +2,16 @@
 
 namespace App\Notifications;
 
-use App\Models\Discussion;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class ReplyDiscussionNotification extends Notification
+class ReplyDiscussionNotification extends Notification implements ShouldQueue
 {
     use Queueable;
+
+    public $comments;
 
     /**
      * Create a new notification instance.
