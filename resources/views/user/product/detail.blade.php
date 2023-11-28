@@ -24,13 +24,14 @@
 @endpush
 
 @section('content')
-    <div class="overlay forum d-flex justify-content-center align-items-center">
+    <div class="overlay produk d-flex justify-content-center align-items-center">
         <div class="container text-white text-center">
             <h1 class="title">Produk Hukum</h1>
             <h6 class="subtitle">JDIH (Jaringan Dokumentasi dan Informasi Hukum) Kabupaten Bone Bolango merupakan
                 sistem
                 pendokumentasian
                 Produk Hukum yang ada pada lingkungan Pemerintah Kabupaten Bone Bolango</h6>
+            <div class="container box d-lg-block d-none"></div>
         </div>
     </div>
 
@@ -40,15 +41,7 @@
             <div class="heading">
                 <a href="#" class="category-product">{{ $product->category->title }}</a>
                 <a href="#" class="status-product">
-                    @if ($product->status == 1)
-                        Mengubah
-                    @elseif($product->status == 2)
-                        Diubah
-                    @elseif($product->status == 3)
-                        Mencabut
-                    @else
-                        Dicabut
-                    @endif
+                    {{ $product->status() }}
                 </a>
             </div>
             <h4>{{ $product->title }}</h4>
@@ -137,15 +130,7 @@
                                     <td class="first-col col-md-4">Status</td>
                                     <td class="col-md-8 good">
                                         <strong>
-                                            @if ($product->status == 1)
-                                                Mengubah
-                                            @elseif($product->status == 2)
-                                                Diubah
-                                            @elseif($product->status == 3)
-                                                Mencabut
-                                            @else
-                                                Dicabut
-                                            @endif
+                                            {{ $product->status() }}
                                         </strong>
                                     </td>
                                 </tr>
