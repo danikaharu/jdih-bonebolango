@@ -48,6 +48,12 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
+                        <a class="dropdown-item" href="{{ route('admin.account.index') }}">
+                            <i class="bx bx-user me-2"></i>
+                            <span class="align-middle">Akun</span>
+                        </a>
+                    </li>
+                    <li>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">

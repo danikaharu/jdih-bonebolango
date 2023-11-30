@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\VisitorController;
 use Illuminate\Support\Facades\Auth;
@@ -58,6 +59,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
 
     // Visitor
     Route::get('/visitor', [VisitorController::class, 'index'])->name('visitor.index');
+
+    // Account
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+    Route::put('/account', [AccountController::class, 'updatePassword'])->name('account.updatePassword');
 });
 
 Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
