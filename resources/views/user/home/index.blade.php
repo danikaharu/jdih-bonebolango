@@ -419,7 +419,7 @@
                     <div class="col-lg-6">
                         <div class="polling-progress">
                             <h2>{{ $data['averageRating'] }}</h2>
-                            @include('user.home.include.rating')
+                            @include('user.home.include.rating', ['ratings' => $data['averageRating']])
                             <h6>{{ $data['totalSurvey'] }} penilaian</h6>
                             <div class="table-responsive text-start">
                                 <table class="table table-borderless text-nowrap">

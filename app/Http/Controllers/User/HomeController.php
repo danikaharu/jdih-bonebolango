@@ -3,22 +3,26 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use App\Models\Survey;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $survey = new \App\Models\Survey;
+        $products = \App\Models\Product::with(['category' => function ($query) {
+            $query->select('id', 'title', 'description');
+        }])->select('products.title', 'products.slug', 'products.year', 'products.rule_number', 'products.category_id')
+            ->latest()
+            ->limit(3)
+            ->get();
 
-        $averageRating = number_format($survey->avg('rating'), 2);
-        $totalSurvey = $survey->totalSurvey();
-        $total5Rating = $survey->totalRating(5);
-        $total4Rating = $survey->totalRating(4);
-        $total3Rating = $survey->totalRating(3);
-        $total2Rating = $survey->totalRating(2);
-        $total1Rating = $survey->totalRating(1);
+        $averageRating = number_format(\App\Models\Survey::avg('rating'), 2);
+        $totalSurvey = \App\Models\Survey::totalSurvey();
+        $total5Rating = \App\Models\Survey::totalRating(5);
+        $total4Rating = \App\Models\Survey::totalRating(4);
+        $total3Rating = \App\Models\Survey::totalRating(3);
+        $total2Rating = \App\Models\Survey::totalRating(2);
+        $total1Rating = \App\Models\Survey::totalRating(1);
 
 
         $percent5Rating =  divnum($total5Rating, $totalSurvey * 100);
@@ -28,13 +32,12 @@ class HomeController extends Controller
         $percent1Rating =  divnum($total1Rating, $totalSurvey * 100);
 
         $data = [
-            'products' => \App\Models\Product::with('category')->latest()->limit(3)->get(),
+            'products' => $products,
             'news' => \App\Models\News::latest()->get(),
-            'survey' => \App\Models\Survey::all(),
             'galleries' => \App\Models\Gallery::latest()->get(),
             'totalProduct' => \App\Models\Product::count(),
             'totalCategoryProduct' => \App\Models\Category::withCount('products')->get(),
-            'discussions' => \App\Models\Discussion::where('is_approved', 1)->latest()->limit(3)->get(),
+            'discussions' => \App\Models\Discussion::where('is_approved', 1)->latest()->limit(3)->select('name', 'comment', 'slug')->get(),
             'totalSurvey' => $totalSurvey,
             'averageRating' => $averageRating,
             'percent5Rating' => number_format($percent5Rating, 2),
@@ -85,6 +88,7 @@ class HomeController extends Controller
 
     public function detail_forum(\App\Models\Discussion $discussion)
     {
+        $discussion->load('comments');
         return view('user.forum.detail', compact('discussion'));
     }
 
