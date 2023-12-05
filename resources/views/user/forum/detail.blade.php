@@ -16,6 +16,7 @@
         <div class="container text-white text-center">
             <h1 class="title">Forum</h1>
         </div>
+        <div class="container box d-lg-block d-none"></div>
     </div>
 
     <!-- Section Detail Forum -->
